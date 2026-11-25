@@ -325,6 +325,7 @@ function start(e){
   later(2400,()=>$('#joint').classList.add('on'));
   const lv=setInterval(leaves,260),pf=setInterval(puff,700);
   later(6800,()=>{clearInterval(lv);$('#glasses').classList.remove('down');$('#glasses').classList.add('off');stage.classList.remove('party')});
+  later(7900,()=>{const g=$('#glasses');if(g)g.remove()});
   later(7600,()=>{laserOn=true;laserLoop()});
   later(9000,()=>setInterval(sticker,3400));
   later(20000,()=>{clearInterval(pf);$('#joint').style.display='none'});
